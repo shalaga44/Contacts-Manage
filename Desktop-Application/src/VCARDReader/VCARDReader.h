@@ -7,6 +7,7 @@
 
 
 #include "../VCARDContact/VCARDContact.h"
+#include <vector>
 
 class VCARDReader {
 public:

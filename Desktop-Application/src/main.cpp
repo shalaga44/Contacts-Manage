@@ -1,10 +1,10 @@
 #include <iostream>
-#include "VCARDGenerator/VCARDGenerator.h"
+#include "VCARDReader/VCARDReader.h"
 
 using namespace std;
 
 int main() {
-    VCARDGenerator g;
+    VCARDReader g;
     cout << g.sayHello() << ", src/main.cpp\n";
     return 0;
 }
