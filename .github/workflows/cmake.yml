@@ -117,8 +117,11 @@ jobs:
       run: |
         include(ProcessorCount)
         ProcessorCount(N)
-
         execute_process(
+			COMMAND cp vCards-Samples/* build
+		)
+        execute_process(
+		          
           COMMAND ${{ steps.cmake_and_ninja.outputs.cmake_dir }}/ctest --extra-verbose -j ${N}
           WORKING_DIRECTORY build
           RESULT_VARIABLE result
