@@ -7,8 +7,8 @@
 
 using namespace std;
 TEST(VCARDGenerator, readVcard) {
-    VCARDReader generator = VCARDReader();
+    VCARDReader generator = VCARDReader();  
     const vector<VCARDContact> contacts = generator.readVCARDFrom("../../vCards-Samples/0-name_phone.vcf");
-    EXPECT_EQ("Mohamed Moawia El-Bashir", "Mohamed Moawia El-Bashir");
+    EXPECT_EQ("Mohamed Moawia El-Bashir", contacts[0].username);
 }
 
