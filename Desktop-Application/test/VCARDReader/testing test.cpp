@@ -1,9 +1,8 @@
-#include <iostream>
 #include "gtest/gtest.h"
-#include "../../src/VCARDGenerator/VCARDGenerator.h"
+#include "../../src/VCARDReader/VCARDReader.h"
 
 using namespace std;
 TEST(VCARDGenerator, testOfTheTest) {
-    VCARDGenerator g;
+    VCARDReader g;
     EXPECT_EQ(g.sayHello(), "Hello");
 }
