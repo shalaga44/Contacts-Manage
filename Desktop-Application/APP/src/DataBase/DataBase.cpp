@@ -99,8 +99,7 @@ vector<Contact> Database::search(string searchText) {
     for (const Contact &contact: allContacts)
         for (const ContactField &field: CONTACTS_FIELDS_LIST) {
             auto value = contact.get(field);
-            size_t found = value.find(searchText);
-            if (found != string::npos) {
+            if (isContaining(value, searchText)) {
                 matchContacts.push_back(contact);
                 break;
             }

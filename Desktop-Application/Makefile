@@ -85,12 +85,12 @@ depend:
 
 clean:
 	$(info ---------------clean-------------------)
-	$(RM) $(OBJS_ALL) $(OBJS_ALL:.o=.o.exe) $(TARGET) $(TARGET_TEST)
+	$(RM) $(OBJS_ALL) $(OBJS_ALL:.o=.o.exe) $(TARGET) $(TARGET_TEST) *.db
 
 -include $(DEPS)
 
 
-run_all_tests: $(OBJS_BUILD_TESTS_NO_START)  $(TARGET_TEST_NO__START)
+run_all_tests: clean $(OBJS_BUILD_TESTS_NO_START)  $(TARGET_TEST_NO__START)
 	$(info --------------run_all_tests---------------)
 	for i in $(OBJS_JUST_TEST_NO__START) ; do \
       		$(CXX) $(LDFLAGS) -o $$i.exe  $(OBJS_JUST_MAIN_NO__START) $$i -l sqlite3 ;\
