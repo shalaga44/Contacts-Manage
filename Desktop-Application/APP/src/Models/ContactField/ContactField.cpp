@@ -16,6 +16,7 @@ ContactField::ContactField(string name, bool hasMultipleValues) :
 string ContactField::getDBName() const {
     string s = name;
     int n = s.length();
+
     int res_ind = 0;
     for (int i = 0; i < n; i++) {
         if ((s[i] >= 'a' && s[i] <= 'z')

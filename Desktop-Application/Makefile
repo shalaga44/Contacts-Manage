@@ -103,6 +103,7 @@ run_all_tests: $(OBJS_BUILD_TESTS_NO_START)  $(TARGET_TEST_NO__START)
       		touch $${SubPath}/in ;\
       		touch $${SubPath}/out ;\
       		touch $${SubPath}/out.correct ;\
-      		$$i.exe <  $${SubPath}/in > $${SubPath}/out;\
-      		diff $${SubPath}/out $${SubPath}/out.correct && echo "TEST::PASSED" && echo;\
+      		$$i.exe <  $${SubPath}/in > $${SubPath}/out || exit 1 ;\
+      		diff $${SubPath}/out $${SubPath}/out.correct || exit 1 ;\
+      		echo "TEST::PASSED" && echo;\
         done

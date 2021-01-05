@@ -21,17 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Desktop-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Desktop-Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/Models/ContactField/ContactField.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/ContactField/ContactField.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/src/Models/ContactField/ContactField.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/ContactField/ContactField.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Contact_Tests/Contact_Tests.o.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,11 +125,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Makefile.run_all_tests">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Desktop-Application" TARGET_NAME="all" CONFIG_NAME="all" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -171,6 +163,11 @@
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="$(TARGET)" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
@@ -221,9 +218,9 @@
       <list>
         <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
-        <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
         <item itemvalue="Makefile.run_all_tests" />
+        <item itemvalue="Makefile.clean" />
       </list>
     </recent_temporary>
   </component>
@@ -240,6 +237,7 @@
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
       <workItem from="1609834456666" duration="14112000" />
+      <workItem from="1609859747726" duration="2748000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -271,6 +269,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" s" />

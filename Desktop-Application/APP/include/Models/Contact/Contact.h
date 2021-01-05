@@ -5,8 +5,8 @@
 #ifndef DESKTOP_APPLICATION_CONTACT_H
 #define DESKTOP_APPLICATION_CONTACT_H
 
-#include <map>
 #include <string>
+#include <map>
 #include <ostream>
 #include "Models/ContactField/ContactField.h"
 
