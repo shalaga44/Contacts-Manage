@@ -18,7 +18,9 @@ private:
 public:
     void set(ContactField field, string value);
 
-    string get(const ContactField& field) const;
+    string get(const ContactField &field) const;
+
+    int getId();
 
     friend ostream &operator<<(ostream &os, const Contact &contact);
 };

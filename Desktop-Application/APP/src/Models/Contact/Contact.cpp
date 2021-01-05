@@ -38,3 +38,7 @@ ostream &operator<<(ostream &os, const Contact &contact) {
     return os;
 }
 
+int Contact::getId() {
+    return stoi(get(CONTACT_DATABASE_FIELD_ID));
+}
+

@@ -123,6 +123,18 @@ void Database::edit(int index, ContactField field, string value) {
     }
 }
 
+void Database::remove(int index) {
+    string query
+            = "DELETE From " + DATABASE_CONTACT_TABLE_NAME
+              + " WHERE " + CONTACT_DATABASE_FIELD_ID.getDBName() + "= " + to_string(index) + " ;";
+
+    char *messageError;
+    status = sqlite3_exec(DB, query.c_str(), nullptr, nullptr, &messageError);
+    if (status != SQLITE_OK) {
+        throw DatabaseException(messageError);
+    }
+}
+
 
 
 

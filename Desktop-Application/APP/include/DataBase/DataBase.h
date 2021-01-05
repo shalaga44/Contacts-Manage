@@ -35,6 +35,8 @@ public:
 
     vector<Contact> search(string searchText);
 
+    void remove(int index);
+
     void edit(int index, ContactField field, string value);
 
     vector<Contact> getAllContacts();

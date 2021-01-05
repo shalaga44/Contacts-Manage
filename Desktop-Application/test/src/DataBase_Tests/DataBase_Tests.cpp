@@ -16,8 +16,17 @@ void edit_test();
 int main() {
     add_contact_test();
     search_test();
-
     edit_test();
+    auto DB = Database(DATABASE_TESTS_NAME);
+    vector<Contact> result = DB.search("moawia");
+    assert(!result.empty());
+    for (Contact c:result) {
+        int id = c.getId();
+        DB.remove(id);
+    }
+    result = DB.search("moawia");
+    assert(result.empty());
+
 
 }
 
