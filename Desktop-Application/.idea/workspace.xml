@@ -21,8 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/out.correct" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,9 +218,9 @@
       <list>
         <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.clean" />
         <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.clean" />
+        <item itemvalue="Makefile.run_all_tests" />
+        <item itemvalue="Makefile.run_all_tests" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +237,7 @@
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
       <workItem from="1609834456666" duration="14112000" />
-      <workItem from="1609859747726" duration="4965000" />
+      <workItem from="1609859747726" duration="6183000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -263,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609863607822</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cleanups">
+      <created>1609865294017</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609865294017</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +297,7 @@
     <MESSAGE value="Added ContactField" />
     <MESSAGE value="Restore Contact" />
     <MESSAGE value="Fix DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix DB" />
+    <MESSAGE value="cleanups" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanups" />
   </component>
 </project>

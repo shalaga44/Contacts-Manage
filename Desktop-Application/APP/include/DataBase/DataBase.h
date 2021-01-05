@@ -33,7 +33,7 @@ public:
 
 
     void addContact(Contact contact);
-
+    vector<Contact> search(string searchText);
     vector<Contact> getAllContacts();
 
     class DatabaseException : public exception {

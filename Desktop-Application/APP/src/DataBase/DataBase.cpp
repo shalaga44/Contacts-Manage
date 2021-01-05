@@ -9,6 +9,7 @@
 #include <exception>
 #include <utility>
 #include <vector>
+#include <string>
 #include <main.h>
 
 Database::~Database() {
@@ -90,6 +91,22 @@ vector<Contact> Database::getAllContacts() {
         return 0;
     }, nullptr, nullptr);
     return contacts;
+}
+
+vector<Contact> Database::search(string searchText) {
+    auto matchContacts = vector<Contact>();
+    vector<Contact> allContacts = getAllContacts();
+    for (const Contact &contact: allContacts)
+        for (const ContactField &field: CONTACTS_FIELDS_LIST) {
+            auto value = contact.get(field);
+            size_t found = value.find(searchText);
+            if (found != string::npos) {
+                matchContacts.push_back(contact);
+                break;
+            }
+        }
+
+    return matchContacts;
 }
 
 
