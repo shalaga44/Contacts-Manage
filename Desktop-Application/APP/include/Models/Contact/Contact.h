@@ -16,6 +16,8 @@ class Contact {
 private:
     map<string, string> infoMap = map<string, string>();
 public:
+    ~Contact();
+
     void set(ContactField field, string value);
 
     string get(const ContactField &field) const;

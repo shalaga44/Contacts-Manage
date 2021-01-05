@@ -42,3 +42,7 @@ int Contact::getId() {
     return stoi(get(CONTACT_DATABASE_FIELD_ID));
 }
 
+Contact::~Contact() {
+    infoMap.clear();
+}
+

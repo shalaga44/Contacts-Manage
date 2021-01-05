@@ -135,6 +135,27 @@ void Database::remove(int index) {
     }
 }
 
+vector<Contact> Database::getContactPage(int pageIndex, int PAGE_SIZE) {
+    const int FIRST_INDEX = 2;
+    int startIndex = (pageIndex * PAGE_SIZE) + FIRST_INDEX;
+    int endIndex = ((1 + pageIndex) * PAGE_SIZE) + FIRST_INDEX - 1;
+    string query
+            = "SELECT * FROM Contact WHERE " + CONTACT_DATABASE_FIELD_ID.getDBName()
+              + " BETWEEN " + to_string(startIndex)
+              + " AND " + to_string(endIndex)
+              + ";";
+    contacts.clear();
+//    println(query);
+    sqlite3_exec(DB, query.c_str(), [](void *data, int argc, char **values, char **fields) -> int {
+        auto contact = Contact();
+        for (int i = 0; i < argc; i++)
+            contact.set(ContactField(fields[i]), values[i]);
+        contacts.push_back(contact);
+        return 0;
+    }, nullptr, nullptr);
+    return contacts;
+}
+
 
 
 

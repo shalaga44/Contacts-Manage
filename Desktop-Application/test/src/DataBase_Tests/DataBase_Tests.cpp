@@ -7,16 +7,49 @@ const char *DATABASE_TESTS_NAME = "test.db";
 const string TEST_CONTACT_0_NAME = "Mohamed Moawia";
 const string TEST_CONTACT_0_PHONE = "0123456789";
 
-void add_contact_test();
+void add_test();
 
 void search_test();
 
 void edit_test();
 
+void remove_test();
+
+void addManyTestContacts(Database &DB, int count);
+
+void paging_test();
+
 int main() {
-    add_contact_test();
+    add_test();
     search_test();
     edit_test();
+    remove_test();
+    paging_test();
+
+
+}
+
+void paging_test() {
+    auto DB = Database(DATABASE_TESTS_NAME);
+    const int PAGE_SIZE = 10;
+    const int TOTAL_PAGES = 10;
+    addManyTestContacts(DB, PAGE_SIZE * TOTAL_PAGES);
+    for (int pageIndex = 0; pageIndex < TOTAL_PAGES; ++pageIndex) {
+        vector<Contact> page = DB.getContactPage(pageIndex, PAGE_SIZE);
+        assert(page.size() == PAGE_SIZE);
+    }
+}
+
+void addManyTestContacts(Database &DB, int count) {
+    for (int i = 0; i < count; ++i) {
+        auto contact = Contact();
+        contact.set(CONTACT_FIELD_NAME, to_string(i + 1));
+        DB.addContact(contact);
+
+    }
+}
+
+void remove_test() {
     auto DB = Database(DATABASE_TESTS_NAME);
     vector<Contact> result = DB.search("moawia");
     assert(!result.empty());
@@ -26,8 +59,6 @@ int main() {
     }
     result = DB.search("moawia");
     assert(result.empty());
-
-
 }
 
 void edit_test() {
@@ -35,7 +66,7 @@ void edit_test() {
     auto DB = Database(DATABASE_TESTS_NAME);
     vector<Contact> result = DB.search("moawia");
     assert(!result.empty());
-    int id = stoi(result[0].get(CONTACT_DATABASE_FIELD_ID));
+    int id = result[0].getId();
     DB.edit(id, CONTACT_FIELD_NAME, NEW_NAME);
 
     result = DB.search("bashir");
@@ -51,14 +82,14 @@ void search_test() {
     assert(result[0].get(CONTACT_FIELD_NAME) == TEST_CONTACT_0_NAME);
 }
 
-void add_contact_test() {
+void add_test() {
 
     auto DB = Database(DATABASE_TESTS_NAME);
     auto contact = Contact();
     contact.set(CONTACT_FIELD_NAME, TEST_CONTACT_0_NAME);
     contact.set(CONTACT_FIELD_PHONE, TEST_CONTACT_0_PHONE);
     DB.addContact(contact);
-    for (Contact c: DB.getAllContacts()) {
+    for (const Contact &c: DB.getAllContacts()) {
         assert(c.get(CONTACT_FIELD_NAME) == TEST_CONTACT_0_NAME);
     }
 

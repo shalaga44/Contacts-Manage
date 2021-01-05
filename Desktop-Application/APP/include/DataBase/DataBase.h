@@ -41,6 +41,8 @@ public:
 
     vector<Contact> getAllContacts();
 
+    vector<Contact> getContactPage(int pageIndex, int PAGE_SIZE);
+
     class DatabaseException : public exception {
     public:
         const char *msg;

@@ -21,6 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" afterDir="false" />
@@ -122,7 +123,7 @@
       <command value="make clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Makefile.run_all_tests">
+  <component name="RunManager" selected="Makefile.clean">
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Desktop-Application" TARGET_NAME="all" CONFIG_NAME="all" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -214,10 +215,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
+        <item itemvalue="Makefile.run_all_tests" />
+        <item itemvalue="Makefile.run_all_tests" />
+        <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.run_all_tests" />
       </list>
     </recent_temporary>
@@ -235,7 +236,7 @@
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
       <workItem from="1609834456666" duration="14112000" />
-      <workItem from="1609859747726" duration="12327000" />
+      <workItem from="1609859747726" duration="15355000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -293,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609871940964</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Complete Delete functionality">
+      <created>1609872700826</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609872700827</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +328,7 @@
     <MESSAGE value="Added Search" />
     <MESSAGE value="Complete Search functionality" />
     <MESSAGE value="Complete Editing functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete Editing functionality" />
+    <MESSAGE value="Complete Delete functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete Delete functionality" />
   </component>
 </project>
