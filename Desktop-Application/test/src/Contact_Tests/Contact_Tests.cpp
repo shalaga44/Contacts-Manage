@@ -6,8 +6,7 @@
 int main() {
     const string name = "Mohamed Moawia";
     auto contact = Contact();
-    contact.set("Name", name);
-    assert(contact.get("Name")== name);
-
+    contact.set(CONTACT_FIELD_NAME, name);
+    assert(contact.get(CONTACT_FIELD_NAME) == name);
     return 0;
 }

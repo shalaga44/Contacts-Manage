@@ -4,13 +4,20 @@
 
 #ifndef DESKTOP_APPLICATION_CONTACT_H
 #define DESKTOP_APPLICATION_CONTACT_H
+
 #include <map>
 #include <string>
-using namespace std;
-class Contact{
-private:
-    map<string, string> fields = map<string, string>();
+#include <ContactField/ContactField.h>
 
+using namespace std;
+
+class Contact {
+private:
+    map<string, string> infoMap = map<string, string>();
+public:
+    void set(ContactField field, string value);
+
+    string get(ContactField field);
 };
 
 #endif //DESKTOP_APPLICATION_CONTACT_H

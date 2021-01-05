@@ -3,3 +3,11 @@
 //
 
 #include "Contact/Contact.h"
+
+void Contact::set(ContactField field, string value) {
+    infoMap[field.getDBName()] = value;
+}
+
+string Contact::get(ContactField field) {
+    return infoMap[field.getDBName()];
+}
