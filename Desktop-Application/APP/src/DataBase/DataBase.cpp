@@ -71,7 +71,7 @@ void Database::addContactToDatabase(Contact contact) {
                  + " VALUES( '"
                  + contactValueSql
                  + "');";
-    println(sql);
+//    println(sql);
     char *messageError;
     int statusInsertContact = sqlite3_exec(DB, sql.c_str(), nullptr, nullptr, &messageError);
     if (statusInsertContact != SQLITE_OK) {

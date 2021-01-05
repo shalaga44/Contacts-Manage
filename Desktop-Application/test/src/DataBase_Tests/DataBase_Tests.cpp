@@ -12,8 +12,6 @@ int main() {
     contact.set(CONTACT_FIELD_PHONE, phone);
     DB.addContact(contact);
     for (Contact c: DB.getAllContacts()) {
-
-        println(c);
         assert(c.get(CONTACT_FIELD_NAME) == name);
     }
 
