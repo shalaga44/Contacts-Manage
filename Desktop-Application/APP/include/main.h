@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Contact/Contact.h"
+#include "Models/Contact/Contact.h"
 #include "IO/IO.h"
-#include "ContactField/ContactField.h"
+#include "Models/ContactField/ContactField.h"
 #include <iostream>
 using namespace std;

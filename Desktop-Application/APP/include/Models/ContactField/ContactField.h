@@ -14,6 +14,7 @@ public:
     explicit ContactField(string name, bool hasMultipleValues);
 
     explicit ContactField(string name);
+
     string getDBName();
 };
 
@@ -55,6 +56,40 @@ static const ContactField CONTACT_FIELD_EMAIL = ContactField("E-mail", true);
 static const ContactField CONTACT_FIELD_PHONE = ContactField("phone", true);
 static const ContactField CONTACT_FIELD_ORGANIZATION = ContactField("Organization", true);
 static const ContactField CONTACT_FIELD_WEBSITE = ContactField("Website", true);
+
+static const ContactField CONTACTS_FIELDS_LIST[] = {CONTACT_FIELD_NAME,
+                                                  CONTACT_FIELD_GIVEN_NAME,
+                                                  CONTACT_FIELD_ADDITIONAL_NAME,
+                                                  CONTACT_FIELD_FAMILY_NAME,
+                                                  CONTACT_FIELD_YOMI_NAME,
+                                                  CONTACT_FIELD_GIVEN_NAME_YOMI,
+                                                  CONTACT_FIELD_ADDITIONAL_NAME_YOMI,
+                                                  CONTACT_FIELD_FAMILY_NAME_YOMI,
+                                                  CONTACT_FIELD_NAME_PREFIX,
+                                                  CONTACT_FIELD_NAME_SUFFIX,
+                                                  CONTACT_FIELD_INITIALS,
+                                                  CONTACT_FIELD_NICKNAME,
+                                                  CONTACT_FIELD_SHORT_NAME,
+                                                  CONTACT_FIELD_MAIDEN_NAME,
+                                                  CONTACT_FIELD_BIRTHDAY,
+                                                  CONTACT_FIELD_GENDER,
+                                                  CONTACT_FIELD_LOCATION,
+                                                  CONTACT_FIELD_BILLING_INFORMATION,
+                                                  CONTACT_FIELD_DIRECTORY_SERVER,
+                                                  CONTACT_FIELD_MILEAGE,
+                                                  CONTACT_FIELD_OCCUPATION,
+                                                  CONTACT_FIELD_HOBBY,
+                                                  CONTACT_FIELD_SENSITIVITY,
+                                                  CONTACT_FIELD_PRIORITY,
+                                                  CONTACT_FIELD_SUBJECT,
+                                                  CONTACT_FIELD_NOTES,
+                                                  CONTACT_FIELD_LANGUAGE,
+                                                  CONTACT_FIELD_PHOTO,
+                                                  CONTACT_FIELD_GROUP_MEMBERSHIP,
+                                                  CONTACT_FIELD_EMAIL,
+                                                  CONTACT_FIELD_PHONE,
+                                                  CONTACT_FIELD_ORGANIZATION,
+                                                  CONTACT_FIELD_WEBSITE};
 
 
 #endif //DESKTOP_APPLICATION_CONTACTFIELD_H

@@ -2,7 +2,7 @@
 // Created by shalaga44 on 1/5/21.
 //
 
-#include "Contact/Contact.h"
+#include "Models/Contact/Contact.h"
 
 void Contact::set(ContactField field, string value) {
     infoMap[field.getDBName()] = value;
