@@ -20,12 +20,20 @@ string Contact::get(const ContactField &field) const {
 }
 
 ostream &operator<<(ostream &os, const Contact &contact) {
-    os << "Contact(\n\t";
+    os << "Contact:\n        ";
     int size = std::size(CONTACTS_FIELDS_LIST);
-    for (int i = 0; i < size - 1; ++i)
-        os << CONTACTS_FIELDS_LIST[i].getTitle() << ": " << contact.get(CONTACTS_FIELDS_LIST[i]) << "), (";
+    for (int i = 0; i < size - 1; ++i) {
 
-    os << CONTACTS_FIELDS_LIST[size - 1].getDBName() + ")";
+        const ContactField field = CONTACTS_FIELDS_LIST[i];
+
+        const string &value = contact.get(field);
+        if (value.empty()) continue;
+        os << field.getTitle() << ": " << value << "    ";
+    }
+    const ContactField &field = CONTACTS_FIELDS_LIST[size - 1];
+    const string &value = contact.get(field);
+    if (!value.empty())
+        os << field.getTitle() << ": " << value << "    ";
 
     return os;
 }

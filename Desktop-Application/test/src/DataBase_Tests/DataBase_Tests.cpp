@@ -3,7 +3,14 @@
 //
 #include "../../include/tests.h"
 
+void add_contact_test();
+
 int main() {
+    add_contact_test();
+
+}
+
+void add_contact_test() {
     const string name = "Mohamed Moawia";
     const string phone = "0123456789";
     auto DB = Database("test.db");

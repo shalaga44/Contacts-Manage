@@ -21,14 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Desktop-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Desktop-Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/Models/ContactField/ContactField.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/ContactField/ContactField.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +117,7 @@
     <option name="myCommands">
       <command value="make APP" />
       <command value="make run" />
+      <command value="make clean" />
     </option>
   </component>
   <component name="RunManager" selected="Makefile.run_all_tests">
@@ -217,7 +213,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.clean" />
+        <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
         <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
@@ -237,7 +233,7 @@
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
       <workItem from="1609834456666" duration="14112000" />
-      <workItem from="1609859747726" duration="2748000" />
+      <workItem from="1609859747726" duration="4965000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -253,7 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609837353654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Restore Contact">
+      <created>1609863120445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609863120445</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix DB">
+      <created>1609863607822</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609863607822</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +284,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" s" />
     <MESSAGE value="Added ContactField" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ContactField" />
+    <MESSAGE value="Restore Contact" />
+    <MESSAGE value="Fix DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix DB" />
   </component>
 </project>
