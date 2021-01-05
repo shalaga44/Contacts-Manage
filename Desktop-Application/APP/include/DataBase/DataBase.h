@@ -13,7 +13,6 @@
 class Database {
 private:
     inline static const string DATABASE_CONTACT_TABLE_NAME = "Contact";
-    inline static const string DATABASE_CONTACT_FIELD_ID = "ID";
     sqlite3 *DB = nullptr;
     int status = 0;
     inline static vector<Contact> contacts;
@@ -33,7 +32,11 @@ public:
 
 
     void addContact(Contact contact);
+
     vector<Contact> search(string searchText);
+
+    void edit(int index, ContactField field, string value);
+
     vector<Contact> getAllContacts();
 
     class DatabaseException : public exception {

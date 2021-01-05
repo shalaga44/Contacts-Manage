@@ -21,13 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/APP/include/Utils/StringUtils/StringUtils.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APP/src/Utils/StringUtils/StringUtils.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/StringUtils_Tests/StringUtils_Tests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/Models/ContactField/ContactField.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/ContactField/ContactField.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +168,8 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="$(TARGET)" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="$(TARGET)" workingDirectory="" arguments="">
+    <configuration name="$(TARGET_TEST_NO__START)" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="$(TARGET_TEST_NO__START)" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -201,7 +199,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Makefile.$(TARGET)" />
       <item itemvalue="Makefile.run" />
       <item itemvalue="Makefile.clean" />
       <item itemvalue="Makefile.run_all_tests" />
@@ -213,14 +210,15 @@
       <item itemvalue="Makefile Application.run_all_tests" />
       <item itemvalue="Makefile Application.run_test" />
       <item itemvalue="Makefile Application.tests" />
+      <item itemvalue="Makefile.$(TARGET_TEST_NO__START)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Makefile.clean" />
         <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.clean" />
         <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.run_all_tests" />
+        <item itemvalue="Makefile.$(TARGET_TEST_NO__START)" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +235,7 @@
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
       <workItem from="1609834456666" duration="14112000" />
-      <workItem from="1609859747726" duration="8040000" />
+      <workItem from="1609859747726" duration="11647000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -281,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609866556595</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Complete Search functionality">
+      <created>1609868531594</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609868531594</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +311,7 @@
     <MESSAGE value="Fix DB" />
     <MESSAGE value="cleanups" />
     <MESSAGE value="Added Search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Search" />
+    <MESSAGE value="Complete Search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete Search functionality" />
   </component>
 </project>

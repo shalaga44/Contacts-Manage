@@ -21,6 +21,7 @@ Database::Database(const char *databasePath) {
     checkDataBaseIsOpen();
 }
 
+
 void Database::checkDataBaseIsOpen() {
     if (status)
         throw DatabaseException(sqlite3_errmsg(DB));
@@ -42,7 +43,8 @@ void Database::createContactTable() {
 
 
     string sql = "CREATE TABLE IF NOT EXISTS " + DATABASE_CONTACT_TABLE_NAME + "("
-                 + DATABASE_CONTACT_FIELD_ID + " INTEGER default 0 constraint Contact_pk primary key autoincrement, "
+                 + CONTACT_DATABASE_FIELD_ID.getDBName() +
+                 " INTEGER default 0 constraint Contact_pk primary key autoincrement, "
                  + contactsSql
                  + ");";
     char *messageError;
@@ -107,5 +109,20 @@ vector<Contact> Database::search(string searchText) {
 
     return matchContacts;
 }
+
+void Database::edit(int index, ContactField field, string value) {
+    string query
+            = "UPDATE " + DATABASE_CONTACT_TABLE_NAME
+              + " SET  " + field.getDBName() + " = '" + value + "'"
+              + " WHERE " + CONTACT_DATABASE_FIELD_ID.getDBName() + "= " + to_string(index) + " ;";
+
+    char *messageError;
+    status = sqlite3_exec(DB, query.c_str(), nullptr, nullptr, &messageError);
+    if (status != SQLITE_OK) {
+        throw DatabaseException(messageError);
+    }
+}
+
+
 
 
