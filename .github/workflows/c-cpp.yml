@@ -7,13 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
-    steps:
+    steps:	
     - uses: actions/checkout@v2
     - name: make test
       run: make run_all_tests
+      working-directory: ./Desktop-Application
     - name: make clean
       run: make clean
+      working-directory: ./Desktop-Application
