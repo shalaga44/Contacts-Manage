@@ -13,19 +13,24 @@ ContactField::ContactField(string name, bool hasMultipleValues) :
         name(std::move(name)),
         hasMultipleValues(hasMultipleValues) {}
 
-string ContactField::getDBName() {
-    int n = name.length();
+string ContactField::getDBName() const {
+    string s = name;
+    int n = s.length();
     int res_ind = 0;
     for (int i = 0; i < n; i++) {
-        if ((name[i] >= 'a' && name[i] <= 'z')
-            || (name[i] >= 'A' && name[i] <= 'Z')
-            || (name[i] >= '0' && name[i] <= '9'))
-            name[res_ind++] = name[i];
+        if ((s[i] >= 'a' && s[i] <= 'z')
+            || (s[i] >= 'A' && s[i] <= 'Z')
+            || (s[i] >= '0' && s[i] <= '9'))
+            s[res_ind++] = s[i];
         else {
-            name[i + 1] = toupper(name[i + 1]);
+            s[i + 1] = toupper(s[i + 1]);
             continue;
         }
     }
 
-    return name.substr(0, res_ind);
+    return s.substr(0, res_ind);
+}
+
+string ContactField::getTitle() const {
+    return name;
 }

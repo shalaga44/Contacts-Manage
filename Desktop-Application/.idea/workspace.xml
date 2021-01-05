@@ -21,15 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/APP/include/ContactField/ContactField.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APP/src/ContactField/ContactField.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/Contact/Contact.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Contact/Contact.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/Models/ContactField/ContactField.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/ContactField/ContactField.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/Contact/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Contact/Contact.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Contact_Tests/Contact_Tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/Contact_Tests/Contact_Tests.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Contact_Tests/out" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/Contact_Tests/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Contact_Tests/out.correct" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/Contact_Tests/out.correct" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/Models/ContactField/ContactField.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/ContactField/ContactField.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/Contact_Tests/Contact_Tests.o.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,17 +47,22 @@
     </projectState>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mohamed Moawia &lt;mohamedmoawia4@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="inital commit" />
-        <option name="rewordedMessage" value="initial commit" />
+        <option name="originalMessage" value="Fix make path" />
+        <option name="rewordedMessage" value="Fix make path" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="33186b203ab07d086fe52230964021bdc811513c" />
+    <option name="onto" value="6275e9b9845e47ec513dcf378fb13076fe801923" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -109,6 +116,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/APP/src/Models" />
+      <recent name="$PROJECT_DIR$/APP/include/Models" />
       <recent name="$PROJECT_DIR$/APP/src/IO" />
     </key>
   </component>
@@ -118,7 +127,12 @@
       <command value="make run" />
     </option>
   </component>
-  <component name="RunManager" selected="Makefile.clean">
+  <component name="RunManager" selected="Makefile.run_all_tests">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Desktop-Application" TARGET_NAME="all" CONFIG_NAME="all" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -193,6 +207,7 @@
       <item itemvalue="Makefile.$(TARGET)" />
       <item itemvalue="Makefile.run" />
       <item itemvalue="Makefile.clean" />
+      <item itemvalue="Makefile.run_all_tests" />
       <item itemvalue="Makefile.run_test" />
       <item itemvalue="Makefile Application.depend" />
       <item itemvalue="Makefile Application.all" />
@@ -201,15 +216,14 @@
       <item itemvalue="Makefile Application.run_all_tests" />
       <item itemvalue="Makefile Application.run_test" />
       <item itemvalue="Makefile Application.tests" />
-      <item itemvalue="Makefile.run_all_tests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
         <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.run_test" />
         <item itemvalue="Makefile.clean" />
-        <item itemvalue="Makefile.run_test" />
+        <item itemvalue="Makefile.run_all_tests" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +239,7 @@
       <workItem from="1609831177559" duration="299000" />
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
-      <workItem from="1609834456666" duration="2842000" />
+      <workItem from="1609834456666" duration="14112000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -234,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609836055989</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added ContactField">
+      <created>1609837353654</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609837353654</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +274,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" s" />
-    <option name="LAST_COMMIT_MESSAGE" value=" s" />
+    <MESSAGE value="Added ContactField" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ContactField" />
   </component>
 </project>

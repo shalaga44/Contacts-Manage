@@ -7,6 +7,7 @@
 
 #include <map>
 #include <string>
+#include <ostream>
 #include "Models/ContactField/ContactField.h"
 
 using namespace std;
@@ -17,7 +18,9 @@ private:
 public:
     void set(ContactField field, string value);
 
-    string get(ContactField field);
+    string get(const ContactField& field) const;
+
+    friend ostream &operator<<(ostream &os, const Contact &contact);
 };
 
 #endif //DESKTOP_APPLICATION_CONTACT_H

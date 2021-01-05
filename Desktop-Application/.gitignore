@@ -1,3 +1,5 @@
 *.o
 Makefile.depend
 app
+*.db
+*.exe

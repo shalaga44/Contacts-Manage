@@ -4,6 +4,7 @@
 
 #ifndef DESKTOP_APPLICATION_CONTACTFIELD_H
 #define DESKTOP_APPLICATION_CONTACTFIELD_H
+#include <string>
 using namespace std;
 
 class ContactField {
@@ -15,7 +16,8 @@ public:
 
     explicit ContactField(string name);
 
-    string getDBName();
+    string getDBName() const;
+    string getTitle() const;
 };
 
 

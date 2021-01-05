@@ -5,7 +5,7 @@ TARGET_TEST = tests
 TARGET_TEST_PATH = ./test
 
 INCLUDES = -I$(TARGET_PATH)/include -I$(TARGET_TEST_PATH)/include
-CXXFLAGS = -O2 -Wall $(INCLUDES)
+CXXFLAGS = -std=c++17 -O2 -Wall $(INCLUDES)
 LDFLAGS = -lm
 
 
@@ -59,15 +59,15 @@ all: $(TARGET)
 
 $(TARGET): $(OBJS_BUILD_MAIN) $(HEADS_MAIN)
 	$(info ----------------TARGET-------------------)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJS_BUILD_MAIN)
+	$(CXX) $(LDFLAGS) -o $@ $(OBJS_BUILD_MAIN) -l sqlite3
 
 $(TARGET_TEST): $(OBJS_BUILD_TEST) $(HEADS_TEST)
 	$(info --------------TARGET_TEST----------------)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJS_BUILD_TEST)
+	$(CXX) $(LDFLAGS) -o $@ $(OBJS_BUILD_TEST) -l sqlite3
 
 $(TARGET_TEST_NO__START): $(OBJS_BUILD_TESTS_NO_START) $(HEADS_TEST)
 	$(info ---------TARGET_TEST_NO__START-----------)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJS_BUILD_TESTS_NO_START)
+	$(CXX) $(LDFLAGS) -o $@ $(OBJS_BUILD_TESTS_NO_START) -l sqlite3
 
 run: all
 	$(info -----------------run---------------------)
@@ -93,7 +93,7 @@ clean:
 run_all_tests: $(OBJS_BUILD_TESTS_NO_START)  $(TARGET_TEST_NO__START)
 	$(info --------------run_all_tests---------------)
 	for i in $(OBJS_JUST_TEST_NO__START) ; do \
-      		$(CXX) $(LDFLAGS) -o $$i.exe  $(OBJS_JUST_MAIN_NO__START) $$i;\
+      		$(CXX) $(LDFLAGS) -o $$i.exe  $(OBJS_JUST_MAIN_NO__START) $$i -l sqlite3 ;\
       		export P0=$$(echo $${i}| cut -d '/' -f 2); \
       		export P1=$$(echo $${i}| cut -d '/' -f 3); \
       		export P2=$$(echo $${i}| cut -d '/' -f 4); \
