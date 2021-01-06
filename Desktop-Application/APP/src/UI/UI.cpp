@@ -274,6 +274,8 @@ void UI::AddContactUI() {
         getyx(stdscr, y, x);
         while (liveInput(input, y, x)) {}
         c.set(field, input);
+        getyx(stdscr, y, x);
+        move(y, 0);
         clrtoeol();
         move(0, header.length());
     }
