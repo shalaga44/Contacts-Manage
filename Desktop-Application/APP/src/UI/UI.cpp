@@ -231,8 +231,26 @@ void UI::ListContactUI() {
 
 void UI::DeleteContactUI() {
     clear();
-    printw("Delete Contact:");
-    getch();
+    noecho();
+    string header = "Delete Contact:";
+    const int headerLength = header.length();
+    printw(header.c_str());
+
+    int i = 0;
+    auto contactsList = DB.search("mo");
+    for (const auto &c: contactsList) {
+        printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
+
+    }
+    string input;
+    while (liveInput(input, 0, headerLength)) {}
+    int index;
+    try { index = stoi(input); }
+    catch (std::invalid_argument &e) { return; }
+
+    int id = contactsList[index].getId();
+    DB.remove(id);
+
 }
 
 void UI::updateContactUI() {

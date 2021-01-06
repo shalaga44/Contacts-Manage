@@ -21,19 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Desktop-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Desktop-Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/Controller/Controller.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/UI/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/UI/UI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/Controller/Controller.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/src/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/UI/UI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Controller_Tests/Controller_Tests.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Controller_Tests/in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Controller_Tests/out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/Controller_Tests/out.correct" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
