@@ -22,7 +22,7 @@ public:
 
     string get(const ContactField &field) const;
 
-    int getId();
+    int getId() const;
 
     friend ostream &operator<<(ostream &os, const Contact &contact);
 };

@@ -21,12 +21,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/APP/include/Controller/Controller.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APP/src/Controller/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Desktop-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Desktop-Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/DataBase/DataBase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/Models/Contact/Contact.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/APP/include/main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/DataBase/DataBase.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/Models/Contact/Contact.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/DataBase_Tests/DataBase_Tests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APP/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +108,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -123,7 +130,7 @@
       <command value="make clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Makefile.clean">
+  <component name="RunManager" selected="Makefile.run_all_tests">
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Desktop-Application" TARGET_NAME="all" CONFIG_NAME="all" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -157,11 +164,6 @@
     <configuration name="tests" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Desktop-Application" TARGET_NAME="tests" CONFIG_NAME="tests" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
@@ -204,6 +206,7 @@
       <item itemvalue="Makefile.clean" />
       <item itemvalue="Makefile.run_all_tests" />
       <item itemvalue="Makefile.run_test" />
+      <item itemvalue="Makefile.$(TARGET_TEST_NO__START)" />
       <item itemvalue="Makefile Application.depend" />
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.main" />
@@ -211,15 +214,14 @@
       <item itemvalue="Makefile Application.run_all_tests" />
       <item itemvalue="Makefile Application.run_test" />
       <item itemvalue="Makefile Application.tests" />
-      <item itemvalue="Makefile.$(TARGET_TEST_NO__START)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Makefile.run_all_tests" />
         <item itemvalue="Makefile.clean" />
-        <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.run_all_tests" />
-        <item itemvalue="Makefile.run_all_tests" />
+        <item itemvalue="Makefile.clean" />
+        <item itemvalue="Makefile.run" />
+        <item itemvalue="Makefile.clean" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +238,11 @@
       <workItem from="1609831482275" duration="1443000" />
       <workItem from="1609833785101" duration="667000" />
       <workItem from="1609834456666" duration="14112000" />
-      <workItem from="1609859747726" duration="15355000" />
+      <workItem from="1609859747726" duration="25926000" />
+      <workItem from="1609925374058" duration="4424000" />
+      <workItem from="1609929835632" duration="1812000" />
+      <workItem from="1609943676570" duration="9342000" />
+      <workItem from="1609968269206" duration="2987000" />
     </task>
     <task id="LOCAL-00001" summary=" s">
       <created>1609836055989</created>
@@ -301,7 +307,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609872700827</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Complete Paging functionality">
+      <created>1609875667350</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609875667350</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add contactAt function">
+      <created>1609962586511</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609962586511</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +349,8 @@
     <MESSAGE value="Complete Search functionality" />
     <MESSAGE value="Complete Editing functionality" />
     <MESSAGE value="Complete Delete functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete Delete functionality" />
+    <MESSAGE value="Complete Paging functionality" />
+    <MESSAGE value="Add contactAt function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add contactAt function" />
   </component>
 </project>

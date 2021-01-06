@@ -17,10 +17,10 @@ Database::Database(const char *databasePath) {
 
 void Database::checkDataBaseIsOpen() {
     if (status)
-        throw DatabaseException(sqlite3_errmsg(DB));
+        throw DatabaseException(sqlite3_errmsg(DB), nullptr);
 }
 
-void Database::addContact(Contact contact) {
+void Database::addContact(const Contact& contact) {
     createContactTable();
     addContactToDatabase(std::move(contact));
 }
@@ -43,7 +43,7 @@ void Database::createContactTable() {
     char *messageError;
     int statusCreateTable = sqlite3_exec(DB, sql.c_str(), nullptr, nullptr, &messageError);
     if (statusCreateTable != SQLITE_OK)
-        throw DatabaseException(messageError);
+        throw DatabaseException(messageError, nullptr);
 }
 
 void Database::addContactToDatabase(Contact contact) {
@@ -71,21 +71,22 @@ void Database::addContactToDatabase(Contact contact) {
     char *messageError;
     int statusInsertContact = sqlite3_exec(DB, sql.c_str(), nullptr, nullptr, &messageError);
     if (statusInsertContact != SQLITE_OK) {
-        throw DatabaseException(messageError);
+        throw DatabaseException("addContactToDatabase", messageError);
     }
 }
 
 vector<Contact> Database::getAllContacts() {
     string query = "SELECT * FROM Contact;";
-    contacts.clear();
+    vector<Contact> *contacts = new vector<Contact>();
     sqlite3_exec(DB, query.c_str(), [](void *data, int argc, char **values, char **fields) -> int {
+        vector<Contact> *contacts  = const_cast<vector<Contact>*>(reinterpret_cast<const vector<Contact>*>(data));
         auto contact = Contact();
         for (int i = 0; i < argc; i++)
             contact.set(ContactField(fields[i]), values[i]);
-        contacts.push_back(contact);
+        contacts->push_back(contact);
         return 0;
-    }, nullptr, nullptr);
-    return contacts;
+    }, contacts, nullptr);
+    return *contacts;
 }
 
 vector<Contact> Database::search(string searchText) {
@@ -112,7 +113,7 @@ void Database::edit(int index, ContactField field, string value) {
     char *messageError;
     status = sqlite3_exec(DB, query.c_str(), nullptr, nullptr, &messageError);
     if (status != SQLITE_OK) {
-        throw DatabaseException(messageError);
+        throw DatabaseException("edit", messageError);
     }
 }
 
@@ -124,7 +125,7 @@ void Database::remove(int index) {
     char *messageError;
     status = sqlite3_exec(DB, query.c_str(), nullptr, nullptr, &messageError);
     if (status != SQLITE_OK) {
-        throw DatabaseException(messageError);
+        throw DatabaseException("remove", messageError);
     }
 }
 
@@ -164,7 +165,7 @@ Contact Database::contactAt(int index) {
         return 0;
     }, contact, &messageError);
     if (status != SQLITE_OK) {
-        throw DatabaseException(messageError);
+        throw DatabaseException("contactAt", messageError);
     }
     return *contact;
 }

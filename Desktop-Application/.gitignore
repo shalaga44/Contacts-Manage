@@ -2,4 +2,5 @@
 Makefile.depend
 app
 *.db
+*.DB
 *.exe

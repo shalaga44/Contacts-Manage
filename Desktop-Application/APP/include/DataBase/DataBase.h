@@ -6,8 +6,14 @@
 #define DESKTOP_APPLICATION_DATABASE_H
 
 #include <sqlite3.h>
-#include "../Models/Contact/Contact.h"
+#include <Models/ContactField/ContactField.h>
+#include <Models/Contact/Contact.h>
+#include <Utils/StringUtils/StringUtils.h>
+#include <iostream>
+#include <exception>
+#include <utility>
 #include <vector>
+#include <string>
 
 
 class Database {
@@ -31,13 +37,14 @@ public:
     ~Database();
 
 
-    void addContact(Contact contact);
+    void addContact(const Contact& contact);
 
     vector<Contact> search(string searchText);
 
     void remove(int index);
 
     void edit(int index, ContactField field, string value);
+    Contact contactAt(int index);
 
     vector<Contact> getAllContacts();
 
@@ -49,6 +56,10 @@ public:
 
         explicit DatabaseException(const char *msg) {
             this->msg = msg;
+        }
+
+        explicit DatabaseException( const char *text, const char *msg) {
+            this->msg = (string(text) +": "+ string(msg)).c_str();
         }
 
         ~DatabaseException() noexcept override {
