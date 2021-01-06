@@ -37,9 +37,9 @@ void Database::createContactTable() {
 
     int size = std::size(CONTACTS_FIELDS_LIST);
     for (int i = 0; i < size - 1; ++i)
-        contactsSql += CONTACTS_FIELDS_LIST[i].getDBName() + " TEXT , ";
+        contactsSql += CONTACTS_FIELDS_LIST[i].getDBName() + " TEXT default '' not null , ";
 
-    contactsSql += CONTACTS_FIELDS_LIST[size - 1].getDBName() + " TEXT";
+    contactsSql += CONTACTS_FIELDS_LIST[size - 1].getDBName() + " TEXT default '' not null";
 
 
     string sql = "CREATE TABLE IF NOT EXISTS " + DATABASE_CONTACT_TABLE_NAME + "("
