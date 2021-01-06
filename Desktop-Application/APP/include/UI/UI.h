@@ -6,9 +6,9 @@
 #define DESKTOP_APPLICATION_UI_H
 
 #include <ncurses.h>
-#include <Controller/Controller.h>
 #include <vector>
 #include <string>
+#include "../../../APP/include/DataBase/DataBase.h"
 
 using namespace std;
 
@@ -18,11 +18,11 @@ private:
 
     void Initialization();
 
-    Controller controller;
+    Database DB = Database("main.DB");
 
 public:
 
-    UI(const Controller &controller);
+    UI();
 
     ~UI();
 

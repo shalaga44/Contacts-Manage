@@ -1,8 +1,7 @@
 #include "main.h"
 
 int main() {
-    UI app(Controller(Database("main.DB")));
-    app.MainOptionsUI();
+     UI().MainOptionsUI();
 
     return 0;
 }

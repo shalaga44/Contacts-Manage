@@ -211,23 +211,19 @@ void UI::ListContactUI() {
     printw(header.c_str());
 
     int i = 0;
-    auto contactsList = controller.search("mo");
-    printw(to_string(contactsList.size()).c_str());
-    for (const auto& c: contactsList) {
+    auto contactsList = DB.search("mo");
+    for (const auto &c: contactsList) {
         printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
 
     }
     string input;
-    getch();
-//    while (liveInput(input, 0, headerLength)) {
-
-//    }
+    while (liveInput(input, 0, headerLength)) {}
     int index;
     try { index = stoi(input); }
     catch (std::invalid_argument &e) { return; }
 
     int id = contactsList[index].getId();
-    auto contact = controller.contactAt(id);
+    auto contact = DB.contactAt(id);
     SingleContactUI(contact);
 
 
@@ -247,9 +243,25 @@ void UI::updateContactUI() {
 
 void UI::AddContactUI() {
     clear();
-    printw("Add Contact:");
+    noecho();
+    string header = "Add Contact:";
+    printw(header.c_str());
+    string input;
+    auto c = Contact();
+    int y, x;
+    for (const ContactField& field: CONTACTS_FIELDS_LIST) {
+        input = "";
+        string text = "\n\t" + field.getTitle() + ": ";
+        printw(text.c_str());
+        getyx(stdscr, y, x);
+        while (liveInput(input, y, x)) {}
+        c.set(field, input);
+        clrtoeol();
+        move(0, header.length());
+    }
 
-    getch();
+
+    DB.addContact(c);
 }
 
 void UI::SearchContactUI() {
@@ -258,45 +270,45 @@ void UI::SearchContactUI() {
     string header = "Search for Contact:";
     const int headerLength = header.length();
     printw(header.c_str());
-    auto contactsList = controller.search("");
+    auto contactsList = DB.search("");
     int i = 0;
     for (auto c: contactsList) {
         printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
 
     }
-//    getch();
 
     bool isInputChanged = false;
 
     string input, oldInput;
-    while (liveInput(input, 0, headerLength)) {
+    while (liveInput(input)) {
         if (oldInput != input) isInputChanged = true;
         if (isInputChanged) {
             clear();
             noecho();
             move(0, 0);
             printw(header.c_str());
-            contactsList = controller.search(input);
-            i = 0;
-            for (auto c: contactsList) {
+            printw(input.c_str());
+            int i = 0;
+            for (const auto &c: DB.search(input)) {
                 printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
 
             }
+            oldInput = input;
             isInputChanged = false;
         }
-
     }
+
     int index;
     try { index = stoi(input); }
     catch (std::invalid_argument &e) { return; }
 
     int id = contactsList[index].getId();
-    auto contact = controller.contactAt(id);
+    auto contact = DB.contactAt(id);
     SingleContactUI(contact);
 
 }
 
-UI::UI(const Controller &controller) : controller(controller) {
+UI::UI() {
     Initialization();
 
 }
