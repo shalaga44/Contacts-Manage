@@ -19,14 +19,27 @@ void addManyTestContacts(Database &DB, int count);
 
 void paging_test();
 
+void contactAt_test();
+
 int main() {
     add_test();
     search_test();
     edit_test();
     remove_test();
     paging_test();
+    contactAt_test();
+}
 
-
+void contactAt_test() {
+    auto DB = Database(DATABASE_TESTS_NAME);
+    const vector<Contact> &contacts = DB.getAllContacts();
+    assert(!contacts.empty());
+    Contact contact0 = contacts[0];
+    const int id = contact0.getId();
+    auto contactAt0 = DB.contactAt(id);
+    for(const ContactField& field: CONTACTS_FIELDS_LIST){
+        assert(contact0.get(field) == contactAt0.get(field));
+    }
 }
 
 void paging_test() {

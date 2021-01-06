@@ -2,15 +2,8 @@
 // Created by shalaga44 on 1/5/21.
 //
 
-#include "../../../APP/include/DataBase/DataBase.h"
-#include "../../include/Models/ContactField/ContactField.h"
-#include <sqlite3.h>
-#include <iostream>
-#include <exception>
-#include <utility>
-#include <vector>
-#include <string>
-#include <main.h>
+#include <DataBase/DataBase.h>
+
 
 Database::~Database() {
     sqlite3_close(DB);
@@ -154,6 +147,26 @@ vector<Contact> Database::getContactPage(int pageIndex, int PAGE_SIZE) {
         return 0;
     }, nullptr, nullptr);
     return contacts;
+}
+
+Contact Database::contactAt(int index) {
+    string query
+            = "SELECT * From " + DATABASE_CONTACT_TABLE_NAME
+              + " WHERE " + CONTACT_DATABASE_FIELD_ID.getDBName() + "= " + to_string(index) + " ;";
+
+    char *messageError;
+    Contact *contact = new Contact();
+
+    status = sqlite3_exec(DB, query.c_str(), [](void *data, int argc, char **values, char **fields) -> int {
+        Contact *contact = const_cast<Contact*>(reinterpret_cast<const Contact*>(data));
+        for (int i = 0; i < argc; i++)
+            contact->set(ContactField(fields[i]), values[i]);
+        return 0;
+    }, contact, &messageError);
+    if (status != SQLITE_OK) {
+        throw DatabaseException(messageError);
+    }
+    return *contact;
 }
 
 
