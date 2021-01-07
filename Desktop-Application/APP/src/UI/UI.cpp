@@ -211,7 +211,7 @@ void UI::ListContactUI() {
     printw(header.c_str());
 
     int i = 0;
-    auto contactsList = DB.search("mo");
+    auto contactsList = DB.search("");
     for (const auto &c: contactsList) {
         printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
 
@@ -237,7 +237,7 @@ void UI::DeleteContactUI() {
     printw(header.c_str());
 
     int i = 0;
-    auto contactsList = DB.search("mo");
+    auto contactsList = DB.search("");
     for (const auto &c: contactsList) {
         printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
 
@@ -255,9 +255,50 @@ void UI::DeleteContactUI() {
 
 void UI::updateContactUI() {
     clear();
-    printw("Update Contact:");
-    getch();
+    noecho();
+    string header = "Update Contact:";
+    const int headerLength = header.length();
+    printw(header.c_str());
+
+    int i = 0;
+    auto contactsList = DB.search("");
+    for (const auto &c: contactsList) {
+        printw(("\n\t" + to_string(i++) + "- " + c.get(CONTACT_FIELD_NAME)).c_str());
+
+    }
+    string input;
+    while (liveInput(input, 0, headerLength)) {}
+    int index;
+    try { index = stoi(input); }
+    catch (std::invalid_argument &e) { return; }
+
+    int id = contactsList[index].getId();
+    auto contact = DB.contactAt(id);
+
+
+    clear();
+    noecho();
+    header = "Edit Contact:";
+    printw(header.c_str());
+    int y, x;
+    for (const ContactField &field: CONTACTS_FIELDS_LIST) {
+        input = contact.get(field);
+        string text = "\n\t" + field.getTitle() + ": ";
+        printw(text.c_str());
+        getyx(stdscr, y, x);
+        printw(input.c_str());
+        while (liveInput(input, y, x)) {}
+        DB.edit(contact.getId(), field, input);
+        getyx(stdscr, y, x);
+        move(y, 0);
+        clrtoeol();
+        move(0, header.length());
+    }
+
+
 }
+
+
 
 void UI::AddContactUI() {
     clear();
@@ -267,7 +308,7 @@ void UI::AddContactUI() {
     string input;
     auto c = Contact();
     int y, x;
-    for (const ContactField& field: CONTACTS_FIELDS_LIST) {
+    for (const ContactField &field: CONTACTS_FIELDS_LIST) {
         input = "";
         string text = "\n\t" + field.getTitle() + ": ";
         printw(text.c_str());

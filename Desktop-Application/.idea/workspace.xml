@@ -22,6 +22,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e069d1d3-f7c6-48f2-ac98-6558d2aa3817" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/APP/src/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/APP/src/UI/UI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
